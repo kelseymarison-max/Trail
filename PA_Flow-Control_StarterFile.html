@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Kelsey Marison
+        Date:   10/1/2026
+        Purpose: Guided Practice HTML sheet to create a webpage that links
+        to external JS to control flow of program.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenway Park Trail Recommender</title>
+    <link rel="stylesheet" href="PA_Flow-Control_StarterFile.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>Greenway Park Trail Recommender</h1>
+        <p>Discover trails based on your hiking level and park needs.</p>
+
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#trails">Trails</a></li>
+                <li><a href="#recommendation">Find a Trail</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- INTRO SECTION -->
+        <section aria-label="Introduction">
+            <h2>Plan Your Outdoor Adventure</h2>
+            <p>
+                Use the trail explorer below to find safe, scenic paths throughout Greenway Park.
+            </p>
+        </section>
+
+        <!-- TRAIL LIST -->
+        <section id="trails">
+            <h2>Available Trails</h2>
+            <section id="trailContainer" class="grid"></section>
+        </section>
+
+        <!-- RECOMMENDER -->
+        <section id="recommendation">
+            <h2>Trail Finder</h2>
+
+            <!-- TODO: Add Form -->
+             <section>
+                <h2>Find Your Perfect Trail</h2>
+
+                <form id="trailForm">
+                    <fieldset>
+                        <legend>Are you bringing pets?</legend>
+
+                        <label>
+                            <input type="radio" name="pets" value="yes" required>
+                            Yes    
+                        </label>
+
+                        <label>
+                            <input type="radio" name="pets" value="no">
+                            No
+                        </label>
+                    </fieldset>
+                    <label for="experience">Hiking Experience:</label>
+                    <select id="experience" required>
+                        <option value="">Select Experience</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+
+                    <button type="submit">Get Recommendation</button>
+                </form>
+            </section>
+
+            <aside id="results">
+                <h2>Recommended Trail</h2>
+                <p>Select options above to receive a recommendation.</p>
+            </aside>            
+
+            <aside id="result" aria-live="polite"></aside>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>Greenway Park • Open Daily Sunrise to Sunset</p>
+    </footer>
+    <script src="PA_Flow-Control_StarterFile.js"></script>
+</body>
+</html>
